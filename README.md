@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# SDLC AI Assistant
 
-## Project info
+An AI-powered Software Development Life Cycle assistant with specialized agents for Product Owners, Developers, Scrum Masters, and Testers. Features seamless Jira integration and intelligent content generation.
 
-**URL**: https://lovable.dev/projects/a0e11f39-b1e2-4890-96b2-13bde268b153
+## 🚀 Features
 
-## How can I edit this code?
+- **4 Specialized AI Agents**:
+  - **Product Owner**: Epic and user story creation, business requirement analysis
+  - **Developer**: Task breakdown, technical documentation, code planning
+  - **Scrum Master**: Board creation, sprint planning, tracking activities
+  - **Tester**: Test case generation, quality assurance planning
 
-There are several ways of editing your application.
+- **Jira Integration**: Direct integration for creating and managing tickets
+- **Context-Aware**: Leverages historical data and document attachments
+- **Memory Retention**: Agents maintain context across conversations
+- **Template-Based**: Uses historical datasets for better content generation
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a0e11f39-b1e2-4890-96b2-13bde268b153) and start prompting.
+- **Frontend**: React with TypeScript
+- **Backend**: Python FastAPI
+- **LLM Integration**: AI content generation with context awareness
+- **Infrastructure**: AWS Cloud
+- **UI Framework**: Tailwind CSS with shadcn/ui components
+- **Build Tool**: Vite
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📋 Prerequisites
 
-**Use your preferred IDE**
+- **Node.js** (version 16 or higher) - [Download here](https://nodejs.org/)
+- **Git** (optional, for cloning) - [Download here](https://git-scm.com/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🔧 Local Development Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1. Clone the Repository
+```bash
+git clone <your-repository-url>
+cd sdlc-ai-assistant
+```
 
-Follow these steps:
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 3. Start Development Server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 4. Open in Browser
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📜 Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🐛 Troubleshooting
 
-## What technologies are used for this project?
+### Common Issues on Windows
 
-This project is built with:
+1. **Port 8080 already in use**
+   - Vite will automatically find the next available port
+   - Check the terminal output for the actual port being used
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. **Node.js version issues**
+   - Ensure you have Node.js 16 or higher installed
+   - Check version: `node --version`
 
-## How can I deploy this project?
+3. **Installation problems**
+   - Clear npm cache: `npm cache clean --force`
+   - Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
 
-Simply open [Lovable](https://lovable.dev/projects/a0e11f39-b1e2-4890-96b2-13bde268b153) and click on Share -> Publish.
+4. **Permission errors**
+   - Run terminal as Administrator on Windows
+   - Or use `npx` prefix for commands
 
-## Can I connect a custom domain to my Lovable project?
+## 🔗 Integration Setup
 
-Yes, you can!
+### Backend API Connection
+The frontend is designed to connect with a Python FastAPI backend. Configure the API endpoints in your environment variables.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Jira Integration
+Set up Jira API credentials for seamless ticket creation and management.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### LLM Services
+Configure your preferred LLM provider for AI agent functionality.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # shadcn/ui components
+│   ├── AgentCard.tsx   # Individual agent cards
+│   ├── AgentDashboard.tsx # Main dashboard
+│   ├── ChatInterface.tsx  # Chat functionality
+│   └── Header.tsx      # App header
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Static assets
+```
+
+## 🎨 Design System
+
+The application uses a comprehensive design system with:
+- Tailwind CSS for styling
+- Custom color tokens and themes
+- Responsive design patterns
+- Dark/light mode support
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For issues and questions, please refer to the project documentation or create an issue in the repository.
